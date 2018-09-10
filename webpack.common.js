@@ -1,22 +1,22 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, "src")
+    main: path.resolve(__dirname, 'src')
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "main.[chunkhash].js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.[chunkhash].js'
   },
   module: {
     rules: [
       {
         test: /\.pug$/,
         use: {
-          loader: "pug-loader",
+          loader: 'pug-loader',
           options: {
             pretty: false
           }
@@ -24,23 +24,23 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2)$/,
-        loader: "file-loader",
+        loader: 'file-loader',
         options: {
-          name: "assets/fonts/[name].[ext]"
+          name: 'assets/fonts/[name].[ext]'
         }
       }
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(["dist"]),
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: "./src/index.pug",
-      filename: "index.html"
+      template: './src/index.pug',
+      filename: 'index.html'
     }),
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, "static/"),
-        to: path.resolve(__dirname, "dist/static")
+        from: path.resolve(__dirname, 'static/'),
+        to: path.resolve(__dirname, 'dist/static')
       }
     ])
   ]
