@@ -1,5 +1,4 @@
 include ./assets/views/common/_mixins.pug
-<!DOCTYPE html>
 html(lang="en")
   head
     meta(charset="UTF-8")
@@ -8,4 +7,9 @@ html(lang="en")
     title Retro|Portfolio
   body
     .wrapper
+      include ./assets/views/sections/header.pug
       include ./assets/views/sections/hero.pug
+      include ./assets/views/sections/about.pug
+      include ./assets/views/sections/portfolio.pug
+      include ./assets/views/sections/blog.pug
+      include ./assets/views/sections/contact.pug
