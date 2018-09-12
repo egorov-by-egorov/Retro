@@ -8,4 +8,8 @@ html(lang="en")
     title Retro|Portfolio
   body
     .wrapper
-      include ./assets/views/sections/hero.pug
+      //- include ./assets/views/sections/hero.pug
+      .box
+      //- img(src=require("../src/assets/images/about_food.svg"), alt="")
+      +icon('about_food', 'icon')
+      +icon('social_tw', 'icon-tw')

@@ -3,3 +3,9 @@
 @import './assets/styles/config/_mixins.scss';
 @import './assets/styles/layout/base.scss';
 @import './assets/styles/sections/hero.scss';
+
+.icon {
+	fill: aqua;
+	stroke: aqua;
+	width: 50px;
+}

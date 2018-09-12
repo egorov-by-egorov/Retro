@@ -19,7 +19,7 @@ module.exports = merge(common, {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        test: /\.(gif|jpe?g|png|svg|webp)$/,
+        test: /\.(gif|jpe?g|png|webp)$/,
         loader: 'file-loader'
       }
     ]
