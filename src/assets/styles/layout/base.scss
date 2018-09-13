@@ -14,7 +14,7 @@ html {
 body {
   font-family: 'Bazar', Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.42;
   color: #383a3c;
   -webkit-font-smoothing: antialiased;
@@ -79,5 +79,52 @@ address {
 
 .page {
   width: 100%;
-  height: 100%;
+  text-transform: uppercase;
+  outline: 1px dashed #5f9191;
+  outline-offset: -3px;
+  text-align: center;
+  padding: rem(30px) 0;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.main__title {
+  font-size: rem(48px);
+  color: #3a3a3a;
+  text-shadow: 2.8px 2.8px 0 #fcfaf7;
+}
+
+.main__breadcrumbs {
+  font-family: 'Robotoslab';
+  text-transform: lowercase;
+  font-size: rem(22px);
+  &::before {
+    display: inline-block;
+    content: '';
+    width: rem(20px);
+    height: rem(2px);
+    margin-right: rem(5px);
+    background-color: #3b3b3b;
+    vertical-align: middle;
+  }
+  &::after {
+    display: inline-block;
+    content: '';
+    width: rem(20px);
+    height: rem(2px);
+    margin-left: rem(5px);
+    background-color: #3b3b3b;
+    vertical-align: middle;
+  }
+}
+
+.main__subtitle {
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-size: rem(12px);
 }

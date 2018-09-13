@@ -1,6 +1,61 @@
 .about {
   background: url('./assets/images/about_bg.png') center no-repeat;
-  text-transform: uppercase;
-  outline: 1px dashed #5f9191;
-  outline-offset: -3px;
+  background-size: cover;
+}
+
+.about__skills {
+  margin-top: rem(35px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skills__item {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: rem(20px);
+  border-bottom: 1px dashed #5f9191;
+}
+
+.skills__logo {
+  @include circle ( rem(100px),
+  #d45244);
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #d45244;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: rem(10px);
+}
+
+.skills__img {
+  @include absolute;
+  width: rem(60px);
+  height: rem(60px);
+}
+
+.skills__title {
+  font-size: rem(28px);
+  margin-bottom: rem(5px);
+  color: #383a3c;
+}
+
+.skills__subtitle {
+  font-size: rem(14px);
+  color: #383a3c;
+  &::after {
+    display: block;
+    width: rem(40px);
+    height: rem(2px);
+    content: '';
+    background-color: #3b3b3bc2;
+    margin: rem(10px) auto;
+  }
+}
+
+.skills__desc {
+  font-family: 'Robotslab';
+  font-size: rem(12px);
+  color: #383a3c;
+  padding: rem(3px);
+  margin-bottom: rem(5px);
 }

@@ -1,6 +1,19 @@
 .page.hero
-  main.hero__content
-    .hero__title
-    .hero__subtitle Old style portfolio
+  main.main__content
+    h1.hero__title
+    h3.hero__subtitle Old style portfolio
     .slider.hero__slider
-  
+      .slider__window
+        ul.slider__list
+          li.slider__item
+            +image('hero_retro.png', 'slider pictures', 'slider__img')
+          li.slider__item
+            +image('header_logo.png', 'slider pictures', 'slider__img')
+          li.slider__item
+            +image('hero_retro.png', 'slider pictures', 'slider__img')
+          li.slider__item
+            +image('header_logo.png', 'slider pictures', 'slider__img')
+      .slider__control
+        button.slider__btn#slider_prev(type='button') <
+        button.slider__btn#slider_next(type='button') >
+    h2.hero__welcome-title "Hello, i am john doe welcome to retro, my wonderful theme!"

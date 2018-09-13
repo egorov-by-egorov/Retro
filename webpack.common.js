@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
   entry: {
@@ -28,6 +29,28 @@ module.exports = {
         options: {
           name: 'assets/fonts/[name].[ext]'
         }
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              spriteFilename: './assets/images/svg/sprite.svg'
+            }
+          },
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                { removeTitle: true },
+                { convertColors: { shorthex: false } },
+                { convertPathData: false }
+              ]
+            }
+          }
+        ]
       }
     ]
   },
@@ -42,6 +65,9 @@ module.exports = {
         from: path.resolve(__dirname, 'static/'),
         to: path.resolve(__dirname, 'dist/static')
       }
-    ])
+    ]),
+    new SpriteLoaderPlugin({
+      plainSprite: true
+    })
   ]
 };

@@ -5,6 +5,18 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background-color: $color;
+}
+
+//responsive
+@function rem($px) {
+  @return $px / 16px+0rem;
+}
+
 //mobile mixin
 @mixin hd {
   @media screen and (min-width: 1440px) {
