@@ -4,11 +4,11 @@
 }
 
 .hero__title {
-  width: 60%;
+  width: 70%;
   min-height: rem(52px);
   margin: 0 auto;
-  background-image: url('./assets/images/hero_retro.png');
-  background-size: cover;
+  background: url('./assets/images/hero_retro.png') center no-repeat;
+  background-size: contain;
   margin-bottom: rem(10px);
 }
 
@@ -22,70 +22,6 @@
   line-height: 2.5;
   margin-bottom: rem(35px);
 }
-
-.slider {
-  width: 90%;
-  height: 30%;
-  margin: 0 auto;
-  background-color: #e3dfd7;
-  border: rem(5px) solid #fff;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: rem(50px);
-  &::after {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    content: 'KODAK CAMERA';
-    text-transform: uppercase;
-    text-align: center;
-    color: #383a3c;
-    width: 100%;
-    background-color: #fff;
-    font-size: rem(12px);
-  }
-}
-
-.slider__window {
-  width: rem(10000px);
-  height: 100%;
-  position: relative;
-}
-
-.slider__list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.slider__item {
-  width: rem(280px);
-  height: 100%;
-  transform: translateX(0%);
-}
-
-.slider__img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.slider__control {
-  @include absolute;
-  width: 106%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.slider__btn {
-  width: rem(21px);
-  height: rem(21px);
-  background-color: #fff;
-  border-radius: 50%;
-  font-size: rem(12px);
-}
-
 .hero__welcome-title {
   font-size: rem(28px);
   color: #f7ebd8;

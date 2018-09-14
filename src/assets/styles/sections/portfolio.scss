@@ -1,6 +1,11 @@
 .portfolio {
   background: url('./assets/images/portfolio_bg.png') center no-repeat;
+  background-size: cover;
   text-transform: uppercase;
   outline: 1px dashed #5f9191;
   outline-offset: -3px;
+}
+
+.portfolio__filter {
+  margin-top: rem(35px);
 }
