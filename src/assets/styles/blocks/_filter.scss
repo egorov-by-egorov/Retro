@@ -1,0 +1,68 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Robotoslab';
+  font-weight: 600;
+}
+
+// Filter MENU
+.filter__menu {
+  width: 100%;
+  margin-bottom: rem(20px);
+}
+
+.filter__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter__menu-item {
+  width: 47%;
+  font-size: rem(18px);
+  margin-bottom: rem(15px);
+  text-align: right;
+  &:first-child {
+    text-align: center;
+    width: 100%;
+    font-size: rem(22px);
+    font-weight: 400;
+    text-transform: none;
+  }
+}
+
+.filter__menu-btn {
+  background-color: #fbfaf6;
+  border-radius: rem(4px) rem(3px) rem(3px) rem(4px);
+  position: relative;
+  text-align: left;
+  color: #383a3c;
+  &::before {
+    position: absolute;
+    top: 0px;
+    left: -17px;
+    display: block;
+    height: 100%;
+    content: '';
+    border-top: 11px solid transparent;
+    border-right: 19px solid #fbfaf6;
+    border-bottom: 12px solid transparent;
+  }
+}
+
+.filter__box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #fff;
+}
+
+.filter__item {
+  width: 49%;
+}
+
+.filter__logo-img {
+  width: 30px;
+}
