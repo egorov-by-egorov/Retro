@@ -19,8 +19,8 @@
 }
 
 .filter__menu-item {
-  width: 47%;
-  font-size: rem(18px);
+  width: 45%;
+  font-size: rem(14px);
   margin-bottom: rem(15px);
   text-align: right;
   &:first-child {
@@ -33,6 +33,7 @@
 }
 
 .filter__menu-btn {
+  height: rem(22px);
   background-color: #fbfaf6;
   border-radius: rem(4px) rem(3px) rem(3px) rem(4px);
   position: relative;
@@ -41,28 +42,87 @@
   &::before {
     position: absolute;
     top: 0px;
-    left: -17px;
+    left: rem(-16px);
     display: block;
     height: 100%;
     content: '';
-    border-top: 11px solid transparent;
-    border-right: 19px solid #fbfaf6;
-    border-bottom: 12px solid transparent;
+    border-top: rem(10px) solid transparent;
+    border-right: rem(19px) solid #fbfaf6;
+    border-bottom: rem(12px) solid transparent;
   }
 }
 
+// filter Content
 .filter__box {
+  &::after {
+    display: block;
+    content: '';
+    width: rem(30px);
+    height: rem(2px);
+    margin: 0 auto rem(10px) auto;
+    background-color: #3b3b3b;
+  }
+}
+
+.filter__list {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  border: 1px solid #fff;
+  justify-content: space-between;
 }
 
 .filter__item {
-  width: 49%;
+  width: 48%;
+  margin-bottom: rem(20px);
+  text-align: center;
+  background-color: #fbfaf6;
+  border: rem(3px) solid #fbfaf6;
+}
+
+.filter__window {
+  width: 100%;
+  height: 20%;
+}
+
+.filter__link {
+  display: block;
+  width: 100%;
+  height: 100%; // background-color: #e3dfd7;
+}
+
+.filter__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.filter__logo {
+  top: rem(-15px);
+  @include circle (rem(50px), #fbfaf6);
+  margin: 0 auto;
+  position: relative;
 }
 
 .filter__logo-img {
-  width: 30px;
+  @include absolute;
+  width: rem(30px);
+  height: rem(30px);
+}
+
+.filter__title {
+  color: #383a3c;
+  font-size: rem(14px);
+  padding: rem(5px);
+}
+
+.filter__btn-add {
+  font-family: 'Oswald';
+  font-weight: 600;
+  font-size: rem(16px);
+  background-color: transparent;
+  border: 1px dashed #5f9191;
+  border-radius: rem(3px);
+  text-transform: uppercase;
+  padding: rem(10px);
+  color: #38353e;
 }

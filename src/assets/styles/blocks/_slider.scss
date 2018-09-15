@@ -54,9 +54,11 @@
 }
 
 .slider__btn {
-  width: rem(21px);
-  height: rem(21px);
-  background-color: #fff;
-  border-radius: 50%;
-  font-size: rem(12px);
+  @include circle(rem(21px), #fff);
+  position: relative;
+}
+.slider__btn-img {
+  @include absolute;
+  width: rem(15px);
+  height: rem(15px);
 }

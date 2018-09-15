@@ -11,6 +11,7 @@
   margin-bottom: rem(20px);
   border-bottom: 1px dashed #5f9191;
 }
+
 .skills__item--hidden {
   display: none;
 }
@@ -62,5 +63,7 @@
   font-size: rem(16px);
   background-color: transparent;
   border: 1px dashed #5f9191;
-  border-radius: 3px;
+  border-radius: rem(3px);
+  padding: rem(10px);
+  color: #38353e;
 }

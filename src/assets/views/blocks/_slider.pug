@@ -1,14 +1,16 @@
 .slider
-  .slider__window
-    ul.slider__list
-      li.slider__item
-        +image('hero_retro.png', 'slider pictures', 'slider__img')
-      li.slider__item
-        +image('header_logo.png', 'slider pictures', 'slider__img')
-      li.slider__item
-        +image('hero_retro.png', 'slider pictures', 'slider__img')
-      li.slider__item
-        +image('header_logo.png', 'slider pictures', 'slider__img')
-  .slider__control
-    button.slider__btn#slider_prev(type='button') <
-    button.slider__btn#slider_next(type='button') >
+        .slider__window
+          ul.slider__list
+            li.slider__item
+              +image('hero_retro.png', 'slider pictures', 'slider__img')
+            li.slider__item
+              +image('header_logo.png', 'slider pictures', 'slider__img')
+            li.slider__item
+              +image('hero_retro.png', 'slider pictures', 'slider__img')
+            li.slider__item
+              +image('header_logo.png', 'slider pictures', 'slider__img')
+        .slider__control
+          a(href="#0").slider__btn#slider_prev
+            +icon('left_arrow', 'slider__btn-img')
+          a(href="#0").slider__btn#slider_next
+            +icon('right_arrow', 'slider__btn-img')
