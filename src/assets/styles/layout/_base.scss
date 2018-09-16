@@ -77,22 +77,25 @@ address {
   position: relative;
 }
 
-.page {
-  width: 100%;
-  text-transform: uppercase;
-  outline: 1px dashed #5f9191;
-  outline-offset: -3px;
-  text-align: center;
-  padding: rem(30px) 0;
-}
-
 .main__content {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  text-transform: uppercase;
   text-align: center;
+}
+
+.main__section {
+  padding: rem(30px) 0;
+  outline: 1px dashed #5f9191;
+  outline-offset: -3px;
+}
+
+.main__container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .main__title {
@@ -129,4 +132,5 @@ address {
   font-family: 'Oswald';
   font-weight: 400;
   font-size: rem(12px);
+  margin-bottom: rem(35px);
 }

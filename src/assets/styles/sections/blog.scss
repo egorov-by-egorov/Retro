@@ -1,10 +1,7 @@
 .blog {
   background: url('./assets/images/blog_bg.png') center no-repeat;
+  background-size: cover;
   text-transform: uppercase;
   outline: 1px dashed #5f9191;
   outline-offset: -3px;
-}
-.svg {
-  fill: aqua;
-  width: 20px;
 }

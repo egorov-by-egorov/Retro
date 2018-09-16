@@ -98,21 +98,23 @@
 
 .filter__logo {
   top: rem(-15px);
-  @include circle (rem(50px), #fbfaf6);
+  @include circle (rem(40px), #fbfaf6);
   margin: 0 auto;
   position: relative;
 }
 
 .filter__logo-img {
   @include absolute;
-  width: rem(30px);
-  height: rem(30px);
+  width: rem(25px);
+  height: rem(25px);
 }
 
 .filter__title {
   color: #383a3c;
   font-size: rem(14px);
   padding: rem(5px);
+  line-height: 1.2;
+  margin-bottom: rem(5px);
 }
 
 .filter__btn-add {
@@ -120,7 +122,7 @@
   font-weight: 600;
   font-size: rem(16px);
   background-color: transparent;
-  border: 1px dashed #5f9191;
+  border: rem(1px) dashed #5f9191;
   border-radius: rem(3px);
   text-transform: uppercase;
   padding: rem(10px);
