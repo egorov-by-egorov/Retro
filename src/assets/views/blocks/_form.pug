@@ -1,1 +1,15 @@
-.form
+form.form(autocomplete="on")
+  fieldset.form__wrap
+    .form__el-wrap
+      label.form__label.vshidden(for="name") Name
+      input.form__input#name(type="text", placeholder="Name",required)
+    .form__el-wrap
+      label.form__label.vshidden(for="password") Password
+      input.form__input#password(type="password", placeholder="Password",required)
+    .form__el-wrap
+      label.form__label.vshidden(for="subject") Subject
+      input.form__input#subject(type="text", placeholder="Subject")
+    .form__el-wrap
+      label.form__label.vshidden(for="textarea") Message
+      textarea.form__textarea#textarea(type="text", cols="30", rows="10", placeholder="Message")
+    button.form__submit(type="submit") Send Message

@@ -48,9 +48,10 @@
 
 .slider__control {
   @include absolute;
-  width: 106%;
+  width: 101%;
   display: flex;
   justify-content: space-between;
+  display: none;
 }
 
 .slider__btn {

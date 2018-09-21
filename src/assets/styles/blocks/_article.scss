@@ -73,10 +73,10 @@
   &::before {
     display: block;
     content: '';
-    width: 60px;
-    height: 1px;
+    width: rem(60px);
+    height: rem(1px);
     margin: 0 auto;
     background-color: #38353e;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
   }
 }

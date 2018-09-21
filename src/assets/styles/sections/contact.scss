@@ -1,7 +1,28 @@
-.conatct {
+.contact {
   background: url('./assets/images/contact_bg.png') center no-repeat;
   background-size: cover;
   text-transform: uppercase;
   outline: 1px dashed #5f9191;
   outline-offset: -3px;
+  padding-bottom: rem(50px);
+}
+
+.about__form {
+  font-family: 'Robotoslab';
+  font-weight: 400;
+}
+
+.contact__socials-title {
+  color: #f6edd8;
+  text-align: center;
+  margin-bottom: rem(20px);
+  font-size: rem(21px);
+  &::after {
+    display: block;
+    content: '';
+    width: rem(30px);
+    height: rem(2px);
+    margin: rem(5px) auto;
+    background-color: #f6edd8;
+  }
 }

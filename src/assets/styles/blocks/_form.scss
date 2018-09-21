@@ -1,0 +1,32 @@
+.form__wrap {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__el-wrap {
+  width: 100%;
+  margin-bottom: rem(10px);
+  color: #a9a9a9;
+}
+
+.form__input {
+  width: 100%;
+  border-radius: rem(5px);
+  padding: rem(5px);
+}
+
+.form__textarea {
+  width: 100%;
+  height: rem(165px);
+  border-radius: rem(5px);
+  padding: rem(5px);
+}
+
+.form__submit {
+  font-weight: 600;
+  color: #383a3c;
+  padding: rem(8px) rem(10px);
+  background-color: #fff;
+  border-radius: rem(5px);
+}

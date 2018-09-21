@@ -58,7 +58,7 @@ address {
 }
 
 // instead of display: none;
-.visuallyhidden {
+.vshidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -77,7 +77,7 @@ address {
   position: relative;
 }
 
-.main__content {
+.main {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -104,7 +104,7 @@ address {
   text-shadow: 2.8px 2.8px 0 #fcfaf7;
 }
 
-.main__breadcrumbs {
+.main__slogan {
   font-family: 'Robotoslab';
   text-transform: lowercase;
   font-size: rem(22px);
@@ -133,4 +133,14 @@ address {
   font-weight: 400;
   font-size: rem(12px);
   margin-bottom: rem(35px);
+}
+
+.main_color--beige {
+  color: #d4cebf;
+  &::before {
+    background-color: #d4cebf;
+  }
+  &::after {
+    background-color: #d4cebf;
+  }
 }
