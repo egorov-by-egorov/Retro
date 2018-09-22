@@ -16,6 +16,11 @@
 .filter__menu-list {
   display: flex;
   flex-wrap: wrap;
+  @include laptop {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 .filter__menu-item {
@@ -29,6 +34,18 @@
     font-size: rem(22px);
     font-weight: 400;
     text-transform: none;
+    @include laptop {
+      width: auto;
+      font-size: 16px;
+    }
+  }
+  @include tablets {
+    width: 23%;
+    font-size: rem(18px);
+  }
+  @include laptop {
+    width: auto;
+    font-size: rem(14px);
   }
 }
 
@@ -53,16 +70,6 @@
 }
 
 // filter Content
-.filter__box {
-  &::after {
-    display: block;
-    content: '';
-    width: rem(30px);
-    height: rem(2px);
-    margin: 0 auto rem(10px) auto;
-    background-color: #3b3b3b;
-  }
-}
 
 .filter__list {
   width: 100%;
@@ -77,6 +84,9 @@
   text-align: center;
   background-color: #fbfaf6;
   border: rem(3px) solid #fbfaf6;
+  @include laptop {
+    width: 23%;
+  }
 }
 
 .filter__window {
@@ -101,12 +111,26 @@
   @include circle (rem(40px), #fbfaf6);
   margin: 0 auto;
   position: relative;
+  @include tablets {
+    @include circle (rem(60px), #fbfaf6);
+  }
+  @include laptop {
+    @include circle (rem(40px), #fbfaf6);
+  }
 }
 
 .filter__logo-img {
   @include absolute;
   width: rem(25px);
   height: rem(25px);
+  @include tablets {
+    width: rem(35px);
+    height: rem(35px);
+  }
+  @include laptop {
+    width: rem(25px);
+    height: rem(25px);
+  }
 }
 
 .filter__title {
@@ -114,6 +138,12 @@
   font-size: rem(14px);
   padding: rem(5px);
   line-height: 1.2;
+  @include tablets {
+    font-size: rem(18px);
+  }
+  @include laptop {
+    font-size: rem(14px);
+  }
 }
 
 .filter__btn-add {
@@ -121,9 +151,21 @@
   font-weight: 600;
   font-size: rem(16px);
   background-color: transparent;
-  border: rem(1px) dashed #5f9191;
-  border-radius: rem(3px);
   text-transform: uppercase;
   padding: rem(10px);
   color: #38353e;
+  &::before {
+    display: block;
+    content: '';
+    width: rem(40px);
+    height: rem(2px);
+    margin: 0 auto rem(10px) auto;
+    background-color: #3b3b3b;
+  }
+  @include tablets {
+    font-size: rem(20px);
+  }
+  @include laptop {
+    font-size: rem(16px);
+  }
 }

@@ -6,7 +6,8 @@
 
 .socials__item {
   @include circle(rem(45px), #f6edd8);
-  margin-right: rem(10px);
+  box-shadow: 0 0 0 rem(2px) #383a3c, 0 0 0 rem(4px) #f6edd8;
+  margin-right: rem(15px);
   position: relative;
   opacity: .6;
   transition: opacity .3s;
@@ -15,6 +16,9 @@
   }
   &:hover {
     opacity: 1;
+  }
+  @include tablets {
+    @include circle(rem(60px), #f6edd8);
   }
 }
 
@@ -28,4 +32,8 @@
   width: rem(25px);
   height: rem(25px);
   @include absolute;
+  @include tablets {
+    width: rem(35px);
+    height: rem(35px);
+  }
 }

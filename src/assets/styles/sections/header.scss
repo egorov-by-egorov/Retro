@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: rem(14px);
   padding: 0 rem(7px);
   text-align: center;
   background: url('./assets/images/hero_bg.png') center no-repeat;
@@ -11,6 +12,10 @@
   outline: 1px dashed #5f9191;
   outline-offset: -5px;
   box-shadow: -1px 1px 15px rgba(0, 0, 0, 0.523);
+  @include tablets {
+    font-size: rem(22px);
+    outline: 2px dashed #5f9191;
+  }
 }
 
 .header__list {
@@ -21,9 +26,19 @@
 .header__item {
   display: inline-block;
   margin-right: rem(5px);
-  font-size: rem(14px);
   &:last-child {
     margin-right: 0;
+  }
+  @include tablets {
+    margin-right: rem(45px);
+  }
+  @include laptop {
+    margin-right: rem(55px);
+    opacity: .7;
+    transition: opacity .3s;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -36,6 +51,14 @@
   height: rem(60px);
   margin-right: rem(5px);
   z-index: 1;
+  @include tablets {
+    margin-right: rem(45px);
+    width: rem(105px);
+    height: rem(100px);
+  }
+  @include laptop {
+    margin-right: rem(55px);
+  }
 }
 
 .header__logo-link {

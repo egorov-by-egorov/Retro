@@ -79,7 +79,6 @@ address {
 
 .main {
   width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -88,20 +87,46 @@ address {
 }
 
 .main__section {
+  width: 100%;
   padding: rem(30px) 0;
   outline: 1px dashed #5f9191;
   outline-offset: -3px;
+  text-transform: uppercase;
+  @include tablets {
+    padding: rem(70px) 0;
+    outline: 2px dashed #5f9191;
+    outline-offset: -6px;
+    &:first-child {
+      outline: 2px dashed #5f9191;
+      outline-offset: -3px;
+    }
+    &:nth-child(3) {
+      outline-color: #d4cebf
+    }
+    &:last-child {
+      outline-color: #d4cebf
+    }
+  }
 }
 
 .main__container {
   width: 90%;
   margin: 0 auto;
+  @include laptop {
+    width: 70%;
+  }
 }
 
 .main__title {
   font-size: rem(48px);
   color: #3a3a3a;
   text-shadow: 2.8px 2.8px 0 #fcfaf7;
+  @include tablets {
+    font-size: rem(64px);
+  }
+  @include laptop {
+    font-size: rem(54px);
+  }
 }
 
 .main__slogan {
@@ -126,6 +151,12 @@ address {
     background-color: #3b3b3b;
     vertical-align: middle;
   }
+  @include tablets {
+    font-size: rem(34px);
+  }
+  @include tablets {
+    font-size: rem(24px);
+  }
 }
 
 .main__subtitle {
@@ -133,6 +164,14 @@ address {
   font-weight: 400;
   font-size: rem(12px);
   margin-bottom: rem(35px);
+  @include tablets {
+    font-size: rem(22px);
+    margin-bottom: rem(45px);
+  }
+  @include tablets {
+    font-size: rem(18px);
+    margin-bottom: rem(45px);
+  }
 }
 
 .main_color--beige {

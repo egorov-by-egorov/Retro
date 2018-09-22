@@ -19,6 +19,21 @@
     width: 100%;
     background-color: #fff;
     font-size: rem(12px);
+    @include tablets {
+      font-size: rem(24px);
+    }
+    @include laptop {
+      font-size: rem(16px);
+    }
+  }
+  @include tablets {
+    height: 40%;
+    margin-bottom: rem(80px);
+  }
+  @include laptop {
+    width: 80%;
+    height: 60%;
+    margin-bottom: rem(50px);
   }
 }
 
@@ -38,6 +53,9 @@
   width: rem(280px);
   height: 100%;
   transform: translateX(0%);
+  @include tablets {
+    width: rem(740px);
+  }
 }
 
 .slider__img {
@@ -48,18 +66,29 @@
 
 .slider__control {
   @include absolute;
-  width: 101%;
-  display: flex;
+  width: 100%;
   justify-content: space-between;
   display: none;
+  @include tablets {
+    display: flex;
+    width: 103%;
+  }
 }
 
 .slider__btn {
   @include circle(rem(21px), #fff);
   position: relative;
+  @include tablets {
+    @include circle(rem(35px), #fff);
+  }
 }
+
 .slider__btn-img {
   @include absolute;
   width: rem(15px);
   height: rem(15px);
+  @include tablets {
+    width: rem(20px);
+    height: rem(20px);
+  }
 }

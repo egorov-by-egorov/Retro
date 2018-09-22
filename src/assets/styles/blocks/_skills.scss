@@ -6,7 +6,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  @include laptop {
+    justify-content: space-between;
+  }
 }
 
 .skills__item {
@@ -14,10 +17,21 @@
   margin: 0 auto;
   margin-bottom: rem(20px);
   border-bottom: 1px dashed #5f9191;
+  @include tablets {
+    width: 48%;
+    border-bottom: none;
+    margin-bottom: rem(30px);
+  }
+  @include laptop {
+    width: 23%;
+  }
 }
 
 .skills__item--hidden {
   display: none;
+  @include tablets {
+    display: block;
+  }
 }
 
 .skills__logo {
@@ -26,23 +40,49 @@
   position: relative;
   margin: 0 auto;
   margin-bottom: rem(10px);
+  @include tablets {
+    @include circle ( rem(120px), #d45244);
+  }
+  @include laptop {
+    @include circle ( rem(80px), #d45244);
+  }
 }
 
 .skills__img {
   @include absolute;
   width: rem(60px);
   height: rem(60px);
+  @include tablets {
+    width: rem(80px);
+    height: rem(80px);
+  }
+  @include laptop {
+    width: rem(40px);
+    height: rem(40px);
+  }
 }
 
 .skills__title {
   font-size: rem(28px);
   margin-bottom: rem(5px);
   color: #383a3c;
+  @include tablets {
+    font-size: rem(32px);
+  }
+  @include laptop {
+    font-size: rem(24px);
+  }
 }
 
 .skills__subtitle {
   font-size: rem(14px);
   color: #383a3c;
+  @include tablets {
+    font-size: rem(18px);
+  }
+  @include tablets {
+    font-size: rem(14px);
+  }
   &::after {
     display: block;
     width: rem(40px);
@@ -59,6 +99,13 @@
   color: #383a3c;
   padding: rem(3px);
   margin-bottom: rem(5px);
+  @include tablets {
+    font-size: rem(20px);
+  }
+  @include tablets {
+    font-size: rem(13px);
+    text-align: left;
+  }
 }
 
 .skills__btn-add {
@@ -70,4 +117,7 @@
   border-radius: rem(3px);
   padding: rem(10px);
   color: #38353e;
+  @include tablets {
+    display: none;
+  }
 }

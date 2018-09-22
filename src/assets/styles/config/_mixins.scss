@@ -24,14 +24,14 @@
   }
 }
 
-@mixin desktop {
-  @media screen and (max-width: 1200px) {
-    @content;
-  }
-}
+// @mixin desktop {
+//   @media screen and (max-width: 1200px) {
+//     @content;
+//   }
+// }
 
 @mixin laptop {
-  @media screen and (max-width: 992px) {
+  @media screen and (min-width: 1048px) {
     @content;
   }
 }

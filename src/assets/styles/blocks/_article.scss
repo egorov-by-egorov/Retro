@@ -9,7 +9,11 @@
 
 .article__article {
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  @include tablets {
+    flex-wrap: nowrap;
+    text-align: left;
+  }
 }
 
 .article__window {
@@ -19,6 +23,14 @@
   border-radius: rem(4px);
   margin-bottom: rem(10px);
   background-color: salmon;
+  @include tablets {
+    width: 30%;
+    height: 20%;
+    margin-right: rem(15px);
+  }
+  @include laptop {
+    height: 30%;
+  }
 }
 
 .article__desc-box {
@@ -26,10 +38,19 @@
   flex-direction: column;
   font-family: 'Robotoslab';
   font-weight: 600;
+  @include tablets {
+    width: 70%;
+  }
 }
 
 .article__title {
   margin-bottom: rem(10px);
+  @include tablets {
+    font-size: rem(18px);
+  }
+  @include laptop {
+    font-size: rem(16px);
+  }
 }
 
 .article__breadcrumbs {
@@ -39,26 +60,49 @@
   width: 100%;
   font-size: rem(12px);
   margin-bottom: rem(10px);
+  @include tablets {
+    position: relative;
+    justify-content: flex-start;
+    font-size: rem(13px);
+  }
+  @include laptop {
+    font-size: rem(11px);
+  }
 }
 
 .article__answer {
   margin: rem(10px) 0 0 0;
   background-color: transparent;
+  @include tablets {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: 0;
+  }
 }
 
 .article__line {
   display: block;
-  content: '';
   width: rem(30px);
   height: rem(2px);
   margin: 0 auto rem(10px) auto;
   background-color: #3b3b3b;
+  @include tablets {
+    margin: 0 0 rem(10px) 0;
+  }
+  @include laptop {
+    height: 1px;
+  }
 }
 
 .article__desc {
   font-weight: 400;
   font-size: rem(14px);
   padding: rem(3px);
+  @include laptop {
+    width: 80%;
+    font-size: rem(12px);
+  }
 }
 
 .article__btn-add {
@@ -78,5 +122,11 @@
     margin: 0 auto;
     background-color: #38353e;
     margin-bottom: rem(10px);
+    @include tablets {
+      width: rem(70px);
+    }
+  }
+  @include tablets {
+    font-size: rem(20px);
   }
 }
