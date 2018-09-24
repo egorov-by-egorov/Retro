@@ -1,16 +1,21 @@
 .slider
-  .slider__window
+  .slider__window(data-glide-el="track")
     ul.slider__list
       li.slider__item
-        +image('hero_retro.png', 'slider pictures', 'slider__img')
+        +image('car1.jpg', 'slider pictures', 'slider__img')
       li.slider__item
-        +image('header_logo.png', 'slider pictures', 'slider__img')
+        +image('car2.jpg', 'slider pictures', 'slider__img')
       li.slider__item
-        +image('hero_retro.png', 'slider pictures', 'slider__img')
+        +image('car3.jpg', 'slider pictures', 'slider__img')
       li.slider__item
-        +image('header_logo.png', 'slider pictures', 'slider__img')
-  .slider__control
-    a(href="#0").slider__btn#slider_prev
+        +image('car4.jpg', 'slider pictures', 'slider__img')
+  .slider__control(data-glide-el="controls")
+    button.slider__btn(type="button",data-glide-dir='<')
       +icon('left_arrow', 'slider__btn-img')
-    a(href="#0").slider__btn#slider_next
+    button.slider__btn(type="button",data-glide-dir='>')
       +icon('right_arrow', 'slider__btn-img')
+  .slider__bullets(data-glide-el="controls[nav]")
+    .slider__btn-bull(data-glide-dir='=0') FORD
+    .slider__btn-bull(data-glide-dir='=1') LINCOLN
+    .slider__btn-bull(data-glide-dir='=2') ASTON
+    .slider__btn-bull(data-glide-dir='=3') Cadilac

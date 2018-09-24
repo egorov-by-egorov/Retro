@@ -1,61 +1,50 @@
 .slider {
   width: 100%;
-  height: 30%;
+  height: 200px;
   margin: 0 auto;
   background-color: #e3dfd7;
   border: rem(5px) solid #fff;
   position: relative;
   overflow: hidden;
-  margin-bottom: rem(50px);
-  &::after {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    content: 'KODAK CAMERA';
-    text-transform: uppercase;
-    text-align: center;
-    color: #383a3c;
-    width: 100%;
-    background-color: #fff;
-    font-size: rem(12px);
-    @include tablets {
-      font-size: rem(24px);
-    }
-    @include laptop {
-      font-size: rem(16px);
-    }
-  }
+  margin-bottom: rem(50px); // &::after {
+  //   display: block;
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+  //   content: 'KODAK CAMERA';
+  //   text-transform: uppercase;
+  //   text-align: center;
+  //   color: #383a3c;
+  //   width: 100%;
+  //   background-color: #fff;
+  //   font-size: rem(12px);
+  //   @include tablets {
+  //     font-size: rem(24px);
+  //   }
+  //   @include laptop {
+  //     font-size: rem(16px);
+  //   }
+  // }
   @include tablets {
-    height: 40%;
+    height: 350px;
     margin-bottom: rem(80px);
   }
   @include laptop {
     width: 80%;
-    height: 60%;
+    height: 450px;
     margin-bottom: rem(50px);
   }
 }
 
 .slider__window {
-  width: rem(10000px);
-  height: 100%;
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .slider__list {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.slider__item {
-  width: rem(280px);
-  height: 100%;
-  transform: translateX(0%);
-  @include tablets {
-    width: rem(740px);
-  }
+  align-items: flex-start;
 }
 
 .slider__img {
@@ -71,7 +60,7 @@
   display: none;
   @include tablets {
     display: flex;
-    width: 103%;
+    width: 103.2%;
   }
 }
 
@@ -91,4 +80,26 @@
     width: rem(20px);
     height: rem(20px);
   }
+}
+
+.slider__bullets {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  z-index: 3;
+}
+
+.slider__btn-bull {
+  display: none;
+  font-size: 22px;
+}
+
+.glide__bullet--active {
+  display: block;
 }

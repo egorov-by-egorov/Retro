@@ -50,6 +50,7 @@
     "webpack-plugin-critical": "^1.0.0"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.2.3",
     "normalize.css": "^8.0.0"
   }
 }
