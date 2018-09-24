@@ -91,7 +91,13 @@
 
 .filter__window {
   width: 100%;
-  height: 20%;
+  height: 100px;
+  @include tablets {
+    height: 200px;
+  }
+  @include laptop {
+    height: 150px;
+  }
 }
 
 .filter__link {
