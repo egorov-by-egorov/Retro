@@ -1,10 +1,9 @@
 import './index.scss';
-import './assets/js/common';
+import './assets/js/hero';
+import './assets/js/about';
 
-console.log('index.js is work');
-
+// For All SVG
 function requireAll(r) {
   r.keys().forEach(r);
 }
-
 requireAll(require.context('./assets/images/svg/', true, /\.svg$/));

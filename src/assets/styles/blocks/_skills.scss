@@ -107,17 +107,3 @@
     text-align: left;
   }
 }
-
-.skills__btn-add {
-  font-family: 'Oswald';
-  font-weight: 600;
-  font-size: rem(16px);
-  background-color: transparent;
-  border: 1px dashed #5f9191;
-  border-radius: rem(3px);
-  padding: rem(10px);
-  color: #38353e;
-  @include tablets {
-    display: none;
-  }
-}
