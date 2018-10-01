@@ -1,0 +1,113 @@
+[
+  { 
+    "tags": ["cars", "pinup"],
+    "imageURL": "http://favera.ru/img/styles/pin_teaser/public/2016/03/22/1234831_1458594300.jpg?itok=0DTQ3qJM",
+    "iconURL": "src/assets/images/svg/portfolio_photo.svg", "link": "",
+    "title": "Pin up funny"
+  },
+  {
+    "tags": ["retro"],
+    "imageURL": "http://i.ebayimg.com/00/s/NjY3WDEwMDA=/z/NKkAAOSwstxVPAIY/$_1.JPG?set_id=880000500F",
+    "iconURL": "src/assets/images/svg/portfolio_note.svg",
+    "link": "",
+    "title": "Monro and Elvis"
+  },
+  {
+    "tags": ["cars", "pinup", "city"],
+    "imageURL": "http://4.bp.blogspot.com/-jbXWfUFE-8s/Ub1KwIjQM_I/AAAAAAAABJQ/lsi4F6i4pIs/s320/vintage_opels_summer31.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_photo.svg",
+    "link": "",
+    "title": "love for old cameras"
+  },
+  {
+    "tags": ["retro", "music"],
+    "imageURL": "https://1den.ru/uploads/images/2/9/d/8/3/dfd144e7e6.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_sound.svg",
+    "link": "",
+    "title": "Rock n Roll"
+  },
+  {
+    "tags": ["retro", "music"],
+    "imageURL": "https://www.tomswallpapers.com/mini/201701/89119.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_sound.svg",
+    "link": "",
+    "title": "Vinyl"
+  },
+  {
+    "tags": ["pinup", "animals"],
+    "imageURL": "https://dl.backbook.me/full/e646912405.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_photo.svg",
+    "link": "",
+    "title": "village"
+  },
+  {
+    "tags": ["cars"],
+    "imageURL": "http://vehicleswallpapers.com/Uploads/17-2-2016/844/thumb-retro-car-rear-view.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_photo.svg",
+    "link": "",
+    "title": "Mercedes Benz"
+  },
+  {
+    "tags": ["retro", "music"],
+    "imageURL": "http://www.winwalls.ru/mini/201501/70318.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_photo.svg",
+    "link": "",
+    "title": "retro music"
+  },
+  {
+    "tags": ["house", "city"],
+    "imageURL": "http://4.bp.blogspot.com/-B-l6R1zyzyU/UEicJ6Z47TI/AAAAAAAAAX0/6IlxPrnBtcE/s400/usa-retro-photos-51.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_photo.svg",
+    "link": "",
+    "title": "poor district"
+  },
+  {
+    "tags": ["pinup", "city", "animals"],
+    "imageURL": "http://www.projectframing.co.uk/uploads/thumbs/SA_3AP2747.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_photo.svg",
+    "link": "",
+    "title": "Stone jungle"
+  },
+  {
+    "tags": ["show"],
+    "imageURL": "https://i.ytimg.com/vi/SyJs7rQr-ls/mqdefault.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_tv.svg",
+    "link": "",
+    "title": "retro show"
+  },
+  {
+    "tags": ["pinup", "animals"],
+    "imageURL": "https://i.pinimg.com/236x/18/3b/fd/183bfd3039edf3d515123a40b76d9cbc.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_sound.svg",
+    "link": "",
+    "title": "Pin up's animals"
+  },
+  {
+    "tags": ["show"],
+    "imageURL": "https://i.ytimg.com/vi/6fPlGSdJN0o/0.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_tv.svg",
+    "link": "",
+    "title": "old show"
+  },
+  {
+    "tags": ["pinup", "animals"],
+    "imageURL": "http://xn----7sbbvm5bfs1b.xn--80aswg/wp-content/uploads/2016/12/Pinap-003-1.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_photo.svg",
+    "link": "",
+    "title": "Pin up's animals"
+  },
+  {
+    "tags": ["cars"],
+    "imageURL": "https://i.artfile.me/wallpaper/09-01-2015/346x230/avtomobili-chevrolet-avtomobil-peredok-r-896945.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_photo.svg",
+    "link": "",
+    "title": "chevrolet"
+  },
+  {
+    "tags": ["pinup", "cars"],
+    "imageURL": "http://puzzing.ru/public/puzzles/preview/47/40/47400830112016.jpg",
+    "iconURL": "src/assets/images/svg/portfolio_tv.svg",
+    "link": "",
+    "title": "Sweet mafia"
+  }
+]

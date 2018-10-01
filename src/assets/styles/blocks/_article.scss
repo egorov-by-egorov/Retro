@@ -18,14 +18,14 @@
 }
 
 .article__window {
-  width: 100%;
+  width: 250px;
   height: 200px;
+  margin: 0 auto;
   border: rem(2px) solid #fff;
   border-radius: rem(4px);
   margin-bottom: rem(10px);
   background-color: salmon;
   @include tablets {
-    width: 30%;
     margin-right: rem(15px);
   }
 }
@@ -46,7 +46,7 @@
     font-size: rem(18px);
   }
   @include laptop {
-    font-size: rem(16px);
+    font-size: rem(20px);
   }
 }
 
@@ -62,8 +62,18 @@
     justify-content: flex-start;
     font-size: rem(13px);
   }
-  @include laptop {
-    font-size: rem(11px);
+}
+
+.article__user {
+  &::before {
+    margin: 0 rem(4px);
+    display: inline-block;
+    content: "//";
+  }
+  &::after {
+    margin: 0 rem(4px);
+    display: inline-block;
+    content: "//";
   }
 }
 
@@ -88,7 +98,8 @@
     margin: 0 0 rem(10px) 0;
   }
   @include laptop {
-    height: 1px;
+    width: rem(70px);
+    height: rem(1px);
   }
 }
 
@@ -98,7 +109,6 @@
   padding: rem(3px);
   @include laptop {
     width: 80%;
-    font-size: rem(12px);
   }
 }
 

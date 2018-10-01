@@ -1,6 +1,9 @@
 import './index.scss';
 import './assets/js/hero';
 import './assets/js/about';
+import './assets/js/portfolio';
+import './assets/js/blog';
+import './assets/js/contact';
 
 // For All SVG
 function requireAll(r) {

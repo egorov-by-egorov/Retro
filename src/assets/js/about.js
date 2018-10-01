@@ -1,4 +1,4 @@
-import Data from '../data/data.skills.json';
+import DataSkills from '../data/data.skills.json';
 
 const skills = document.querySelector('.skills');
 
@@ -43,4 +43,4 @@ function createSkills(data) {
   });
   skills.appendChild(skillsList);
 }
-createSkills(Data);
+createSkills(DataSkills);
