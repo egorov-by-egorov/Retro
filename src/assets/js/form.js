@@ -7,11 +7,12 @@ const submit = document.querySelector('.form__submit');
 
 submit.addEventListener('click', e => {
   e.preventDefault();
-  // let formData = e.target.formAction;
-  // console.log(formData);
-  // console.log(e);
+  let formData = e.target.formAction;
 
-  // fetch(formData)
-  //   .then(response => response.json())
-  //   .then(data => console.log(data));
+  fetch(formData, {
+    method: 'post',
+    body: JSON.stringify(/* newPost */)
+  })
+    .then(response => response.json())
+    .then(data => console.log(data));
 });
