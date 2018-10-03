@@ -57,6 +57,16 @@ address {
   font-style: normal;
 }
 
+:valid {
+  color: green;
+  outline-color: green;
+}
+
+:invalid {
+  color: lightcoral;
+  outline-color: red;
+}
+
 // instead of display: none;
 .vshidden {
   position: absolute;
