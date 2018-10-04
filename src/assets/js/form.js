@@ -1,18 +1,30 @@
-const submit = document.querySelector('.form__submit');
+const form = document.querySelector('.form');
+const submitBtn = document.querySelector('.form__submit');
 
-// let newPost = {
-//   title: 'hello world',
-//   body: 'Some Text'
-// };
-
-submit.addEventListener('click', e => {
+submitBtn.addEventListener('click', e => {
   e.preventDefault();
-  let formData = e.target.formAction;
-
-  fetch(formData, {
-    method: 'post',
-    body: JSON.stringify(/* newPost */)
-  })
-    .then(response => response.json())
-    .then(data => console.log(data));
+  const formData = getFormData(form);
+  submitForm(formData);
 });
+
+function getFormData(form) {
+  const info = {};
+  const formElements = form.querySelectorAll('input, textarea');
+  for (const element of formElements) {
+    info[element.name] = element.value;
+  }
+  return info;
+}
+function networkFunc(res) {
+  if (res.status === 404) {
+    console.log(res);
+  }
+}
+function submitForm(data) {
+  fetch('../php/form_introduction.php', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  })
+    .then(response => networkFunc(response))
+    .catch(err => console.log(err));
+}
