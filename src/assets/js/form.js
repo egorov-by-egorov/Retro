@@ -21,15 +21,24 @@ function networkFunc(res) {
   }
 }
 function submitForm(data) {
-  fetch('/static/form_introduction.php', {
+  fetch('/', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      payload: data
-    })
+    body: JSON.stringify(data)
   })
     .then(response => networkFunc(response))
     .catch(err => console.log(err));
 }
+
+// function submitForm(data) {
+//   fetch('../php/form_introduction.php', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       payload: data
+//     })
+//   })
+//     .then(response => networkFunc(response))
+//     .catch(err => console.log(err));
+// }
