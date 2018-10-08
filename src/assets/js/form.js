@@ -21,9 +21,14 @@ function networkFunc(res) {
   }
 }
 function submitForm(data) {
-  fetch('../php/form_introduction.php', {
+  fetch('/static/form_introduction.php', {
     method: 'POST',
-    body: JSON.stringify(data)
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      payload: data
+    })
   })
     .then(response => networkFunc(response))
     .catch(err => console.log(err));
