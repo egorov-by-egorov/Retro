@@ -18,10 +18,12 @@ function getFormData(form) {
 function networkFunc(res) {
   if (res.status === 404) {
     console.log(res);
+  } else if (res.status === 200) {
+    console.log('Статус 200. Все ок!=)');
   }
 }
 function submitForm(data) {
-  fetch('/', {
+  fetch('/server.php', {
     method: 'POST',
     body: JSON.stringify(data)
   })
@@ -30,7 +32,7 @@ function submitForm(data) {
 }
 
 // function submitForm(data) {
-//   fetch('../php/form_introduction.php', {
+//   fetch('/server.php', {
 //     method: 'POST',
 //     headers: {
 //       'Content-Type': 'application/json'

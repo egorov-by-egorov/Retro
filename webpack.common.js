@@ -15,6 +15,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.php$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ]
+      },
+      {
         test: /\.pug$/,
         use: {
           loader: 'pug-loader',
@@ -37,7 +48,7 @@ module.exports = {
             loader: 'svg-sprite-loader',
             options: {
               extract: true,
-              spriteFilename: './assets/images/svg/sprite.svg'
+              spriteFilename: 'assets/images/svg/sprite.svg'
             }
           },
           {

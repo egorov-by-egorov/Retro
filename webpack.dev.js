@@ -5,7 +5,8 @@ module.exports = merge(common, {
   devServer: {
     clientLogLevel: 'warning',
     open: true,
-    overlay: true
+    overlay: true,
+    watchContentBase: true
   },
   module: {
     rules: [
@@ -20,7 +21,11 @@ module.exports = merge(common, {
       },
       {
         test: /\.(gif|jpe?g|png|webp)$/,
-        loader: 'file-loader'
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]',
+          outputPath: 'assets/'
+        }
       }
     ]
   }
