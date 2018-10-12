@@ -20,7 +20,7 @@
     <title>Document</title>
   </head>
   <body>
-    <h2>ЗАКАЗ</h2>
+    <h2>Обращение</h2>
     <ul>
       <li>Имя: ' .$name. '</li>
       <li>Телефон: ' .$phone. '</li>
@@ -38,10 +38,8 @@
   $data = [];
   if ($mail) {
     $data['status'] = "OK";
-    $data['mes'] = "Заказ успешно отправлен";
   } else {
     $data['status'] = "NO";
-    $data['mes'] = "На сервере произошла ошибка";
   }
   echo json_encode($data);
 ?>

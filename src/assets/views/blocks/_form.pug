@@ -6,16 +6,14 @@ form.form(autocomplete="off")
         type="text",
         name="name",
         inputmode="text",
-        title="Введите Ваше имя. Поле должно содержать минимум два символа."
+        title="Введите Ваше имя. Поле должно содержать минимум два символа и иметь только буквы."
         minlength="2",
         placeholder="Name",
         spellcheck="true",
         autocorrect="on",
+        pattern="[A-Za-z]+",
         required,
-        mozactionhint="send",
-        oninvalid="this.setCustomValidity('Введите Ваше имя!!!')",
-        oninput="this.setCustomValidity('')",
-        value="Dima"
+        mozactionhint="send"
         )
     .form__el-wrap
       label.form__label.vshidden(for="phone") Phone
@@ -29,10 +27,7 @@ form.form(autocomplete="off")
         required,
         pattern="[0-9,+]{2}[0-9,()]{5}[0-9]{3}-[0-9]{4}",
         mozactionhint="send",
-        title="Введите контактный номер телефона. Поле должно соответствовать данному примеру: +7(999)999-9999"
-        oninvalid="this.setCustomValidity('Введите номер телефона!!! Используйте данную конструкцию +7(999)999-9999')",
-        oninput="this.setCustomValidity('')",
-        value="+7(999)999-9999"
+        title="Введите контактный номер телефона. Поле должно строго соответствовать данному примеру: +7(999)999-9999"
         )
     .form__el-wrap
       label.form__label.vshidden(for="email") email
@@ -44,9 +39,6 @@ form.form(autocomplete="off")
         required,
         mozactionhint="send",
         title="Введите Email !!! Поле обязательно должно содержать символ @."
-        oninvalid="this.setCustomValidity('Введите корректный Email!!!')",
-        oninput="this.setCustomValidity('')"
-        value="dima@mail.ru"
         )
     .form__el-wrap
       label.form__label.vshidden(for="subject") Subject
@@ -54,8 +46,7 @@ form.form(autocomplete="off")
         type="text",
         name="subject",
         placeholder="Subject",
-        title="Введите тему сообщения.",
-        value="Hello World"
+        title="Введите тему сообщения."
         )
     .form__el-wrap
       label.form__label.vshidden(for="message") Message
