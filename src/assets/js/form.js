@@ -3,7 +3,7 @@ const formElements = form.querySelectorAll('input, textarea');
 document.addEventListener('click', () => {
   document.title = 'Retro|Portfolio';
 });
-// Validation form
+// Validation form \\
 document.addEventListener('DOMContentLoaded', e => {
   e.preventDefault();
   for (const element of formElements) {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', e => {
     };
   }
 });
-// Create FormData
+// Create FormData \\
 const createFormData = elements => {
   const info = {};
   for (const element of elements) {
@@ -36,14 +36,14 @@ const createFormData = elements => {
   }
   return info;
 };
-// Submit button
+// Submit button \\
 form.addEventListener('submit', e => {
   e.preventDefault();
   const formData = createFormData(formElements);
   // console.log(formData);
   submitForm(formData);
 });
-// Fetch request
+// Fetch request \\
 function submitForm(data) {
   fetch('../../server.php', {
     method: 'POST',
@@ -52,6 +52,8 @@ function submitForm(data) {
     .then(response => console.log(response))
     .catch(err => console.log(err));
 }
+
+// Another variants of fetch() \\
 
 // function networkFunc(res) {
 //   if (res.status === 404) {
