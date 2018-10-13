@@ -1,7 +1,9 @@
 const form = document.querySelector('.form');
 const formElements = form.querySelectorAll('input, textarea');
-
-// Validation form
+document.addEventListener('click', () => {
+  document.title = 'Retro|Portfolio';
+});
+// Validation form \\
 document.addEventListener('DOMContentLoaded', e => {
   e.preventDefault();
   for (const element of formElements) {
@@ -10,10 +12,12 @@ document.addEventListener('DOMContentLoaded', e => {
       if (!e.target.validity.valid) {
         const errorText = e.target.title;
         e.target.setCustomValidity(errorText);
+        document.title = 'Ошибка ввода';
       }
     };
     element.oninput = function(e) {
       e.target.setCustomValidity('');
+      document.title = 'Retro|Portfolio';
       if (e.target.name === 'phone' && !e.target.validity.valid) {
         e.target.setCustomValidity('Пример: +7(999)999-9999');
       } else if (e.target.name === 'email' && !e.target.validity.valid) {
@@ -24,7 +28,7 @@ document.addEventListener('DOMContentLoaded', e => {
     };
   }
 });
-// Create FormData
+// Create FormData \\
 const createFormData = elements => {
   const info = {};
   for (const element of elements) {
@@ -32,14 +36,14 @@ const createFormData = elements => {
   }
   return info;
 };
-// Submit button
+// Submit button \\
 form.addEventListener('submit', e => {
   e.preventDefault();
   const formData = createFormData(formElements);
   // console.log(formData);
   submitForm(formData);
 });
-// Fetch request
+// Fetch request \\
 function submitForm(data) {
   fetch('server.php', {
     method: 'POST',
@@ -48,6 +52,8 @@ function submitForm(data) {
     .then(response => console.log(response))
     .catch(err => console.log(err));
 }
+
+// Another variants of fetch() \\
 
 // function networkFunc(res) {
 //   if (res.status === 404) {
