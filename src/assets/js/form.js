@@ -1,6 +1,8 @@
 const form = document.querySelector('.form');
 const formElements = form.querySelectorAll('input, textarea');
-
+document.addEventListener('click', () => {
+  document.title = 'Retro|Portfolio';
+});
 // Validation form
 document.addEventListener('DOMContentLoaded', e => {
   e.preventDefault();
@@ -10,10 +12,12 @@ document.addEventListener('DOMContentLoaded', e => {
       if (!e.target.validity.valid) {
         const errorText = e.target.title;
         e.target.setCustomValidity(errorText);
+        document.title = 'Ошибка ввода';
       }
     };
     element.oninput = function(e) {
       e.target.setCustomValidity('');
+      document.title = 'Retro|Portfolio';
       if (e.target.name === 'phone' && !e.target.validity.valid) {
         e.target.setCustomValidity('Пример: +7(999)999-9999');
       } else if (e.target.name === 'email' && !e.target.validity.valid) {
