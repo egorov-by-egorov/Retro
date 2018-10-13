@@ -1,46 +1,59 @@
-import DataSkills from '../data/data.skills.json';
+export const getSkills = () => {
+  return import('../data/data.skills.json')
+    .then(data => {
+      createSkills(data.default);
+    })
+    .catch(err => console.log(err));
+};
 
-const skills = document.querySelector('.skills');
+function createSkills(skills) {
+  const skillsBox = document.querySelector('.skills');
 
-function createSkills(data) {
-  var skillsList = document.createElement('ul');
+  const skillsList = document.createElement('ul');
   skillsList.classList.add('skills__list');
 
-  data.forEach(elem => {
-    let skillsItem = document.createElement('li');
-    skillsItem.classList.add('skills__item', 'skills--add');
+  for (const skill of skills) {
+    const skillItem = createSkill(skill);
+    skillsList.appendChild(skillItem);
+  }
 
-    let article = document.createElement('article');
-    article.classList.add('skills__article');
-
-    let logo = document.createElement('div');
-    logo.classList.add('skills__logo');
-
-    var logoImg = document.createElement('img');
-    logoImg.setAttribute('src', elem.imageURL);
-    logoImg.classList.add('skills__img');
-
-    let title = document.createElement('div');
-    title.classList.add('skills__title');
-
-    let subtitle = document.createElement('div');
-    subtitle.classList.add('skills__subtitle');
-
-    let desc = document.createElement('div');
-    desc.classList.add('skills__desc');
-
-    skillsList.appendChild(skillsItem);
-    skillsItem.appendChild(article);
-    article.appendChild(logo);
-    logo.appendChild(logoImg);
-    article.appendChild(title);
-    article.appendChild(subtitle);
-    article.appendChild(desc);
-
-    title.textContent = elem.title;
-    subtitle.textContent = elem.subtitle;
-    desc.textContent = elem.desc;
-  });
-  skills.appendChild(skillsList);
+  skillsBox.appendChild(skillsList);
 }
-createSkills(DataSkills);
+
+function createSkill(skill) {
+  let skillsItem = document.createElement('li');
+  skillsItem.classList.add('skills__item', 'skills--add');
+
+  let article = document.createElement('article');
+  article.classList.add('skills__article');
+
+  let logo = document.createElement('div');
+  logo.classList.add('skills__logo');
+
+  var logoImg = document.createElement('img');
+  logoImg.setAttribute('src', skill.imageURL);
+  logoImg.classList.add('skills__img');
+
+  let title = document.createElement('div');
+  title.classList.add('skills__title');
+  title.textContent = skill.title;
+
+  let subtitle = document.createElement('div');
+  subtitle.classList.add('skills__subtitle');
+  subtitle.textContent = skill.subtitle;
+
+  let desc = document.createElement('div');
+  desc.classList.add('skills__desc');
+  desc.textContent = skill.desc;
+
+  logo.appendChild(logoImg);
+
+  article.appendChild(logo);
+  article.appendChild(title);
+  article.appendChild(subtitle);
+  article.appendChild(desc);
+
+  skillsItem.appendChild(article);
+
+  return skillsItem;
+}

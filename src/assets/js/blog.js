@@ -26,6 +26,7 @@ function showPosts(posts) {
   });
 }
 const list = document.querySelector('.article__list');
+
 function createArticle(obj) {
   const li = document.createElement('li');
   li.classList.add('article__item');
