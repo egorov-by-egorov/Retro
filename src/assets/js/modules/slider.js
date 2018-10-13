@@ -1,4 +1,4 @@
-import Glide from '../../../../node_modules/@glidejs/glide';
+import Glide from '@glidejs/glide';
 
 new Glide('.slider', {
   type: 'slider',

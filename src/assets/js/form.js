@@ -45,7 +45,7 @@ form.addEventListener('submit', e => {
 });
 // Fetch request \\
 function submitForm(data) {
-  fetch('../../server.php', {
+  fetch('server.php', {
     method: 'POST',
     body: JSON.stringify(data)
   })

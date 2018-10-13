@@ -55,9 +55,17 @@ module.exports = {
             loader: 'svgo-loader',
             options: {
               plugins: [
-                { removeTitle: true },
-                { convertColors: { shorthex: false } },
-                { convertPathData: false }
+                {
+                  removeTitle: true
+                },
+                {
+                  convertColors: {
+                    shorthex: false
+                  }
+                },
+                {
+                  convertPathData: false
+                }
               ]
             }
           }
@@ -73,8 +81,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, 'static/'),
-        to: path.resolve(__dirname, 'dist/static')
+        from: path.resolve(__dirname, 'static'),
+        to: path.resolve(__dirname, 'dist')
       }
     ]),
     new SpriteLoaderPlugin({
