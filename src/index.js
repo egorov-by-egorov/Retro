@@ -1,7 +1,5 @@
+import './assets/js/modules/slider';
 import './index.scss';
-import './server.php';
-import './assets/js/hero';
-import './assets/js/about';
 import './assets/js/portfolio';
 import './assets/js/form';
 import { getBlogPosts } from './assets/js/blog';

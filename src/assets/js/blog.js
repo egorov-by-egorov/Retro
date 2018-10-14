@@ -1,27 +1,30 @@
 export function getBlogPosts() {
-  const photos = getPhotos();
-  const posts = getPosts();
-  Promise.all([photos, posts]).then(arr => console.log(arr));
+  Promise.all([
+    getPosts()
+      .then(response => response.json())
+      .then(arr => arr.splice(0, 3)),
+    getPhotos()
+      .then(response => response.json())
+      .then(arr => arr.splice(0, 3))
+  ]).then(([posts, photos]) => {
+    splitArraies(posts, photos);
+  });
 }
 
-// function splitArraies(posts, photos) {
-//   const generalPosts = [];
-//   for (const post of posts) {
-//   }
-// }
+function splitArraies(posts, photos) {
+  console.log(posts, photos);
+
+  // for (const photo of photos) {
+  // }
+  // console.log(posts);
+}
 
 const getPhotos = () => {
-  fetch('https://jsonplaceholder.typicode.com/photos')
-    .then(response => response.json())
-    .then(arr => arr.splice(0, 3))
-    .catch(err => console.log(err));
+  return fetch('https://jsonplaceholder.typicode.com/photos');
 };
 
 const getPosts = () => {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(arr => arr.splice(0, 3))
-    .catch(err => console.log(err));
+  return fetch('https://jsonplaceholder.typicode.com/posts');
 };
 
 // function showPosts(posts) {
