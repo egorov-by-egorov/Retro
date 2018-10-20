@@ -15,17 +15,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.php$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]'
-            }
-          }
-        ]
-      },
-      {
         test: /\.pug$/,
         use: {
           loader: 'pug-loader',

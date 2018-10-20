@@ -6,25 +6,7 @@
   border: rem(5px) solid #fff;
   position: relative;
   overflow: hidden;
-  margin-bottom: rem(50px); // &::after {
-  //   display: block;
-  //   position: absolute;
-  //   left: 0;
-  //   bottom: 0;
-  //   content: 'KODAK CAMERA';
-  //   text-transform: uppercase;
-  //   text-align: center;
-  //   color: #383a3c;
-  //   width: 100%;
-  //   background-color: #fff;
-  //   font-size: rem(12px);
-  //   @include tablets {
-  //     font-size: rem(24px);
-  //   }
-  //   @include laptop {
-  //     font-size: rem(16px);
-  //   }
-  // }
+  margin-bottom: rem(50px);
   @include tablets {
     height: 350px;
     margin-bottom: rem(80px);
