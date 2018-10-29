@@ -52,7 +52,6 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.2.3",
-    "normalize.css": "^8.0.0",
-    "vue": "^2.5.17"
+    "normalize.css": "^8.0.0"
   }
 }

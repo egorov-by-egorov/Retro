@@ -1,9 +1,13 @@
+import data from '../data/data.skills.json';
+// export const getSkills = () => {
+//   return import('../data/data.skills.json')
+//     .then(data => {
+//       createSkills(data.default);
+//     })
+//     .catch(err => console.log(err));
+// };
 export const getSkills = () => {
-  return import('../data/data.skills.json')
-    .then(data => {
-      createSkills(data.default);
-    })
-    .catch(err => console.log(err));
+  createSkills(data);
 };
 
 function createSkills(skills) {
