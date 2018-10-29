@@ -1,3 +1,11 @@
+import Vue from 'vue';
+
+/* eslint-disable */
+const app = new Vue({
+  el: '#app',
+  template: '<div>hadsasd</div>'
+})
+
 // // Глобальные переменные.
 // const filterBox = document.querySelector('.filter__box');
 // const portfolioMenu = document.querySelector('.filter__menu');

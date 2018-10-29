@@ -1,11 +1,4 @@
-const blogBtn = document.querySelector('.article__btn-add');
-blogBtn.addEventListener('click', () => {
-  console.log('work');
-
-  getBlogPosts();
-});
-
-function getBlogPosts() {
+export function getBlogPosts() {
   Promise.all([
     getPosts()
       .then(response => response.json())
@@ -38,15 +31,18 @@ const getPosts = () => {
 };
 
 function showPosts(posts) {
-  const articleBox = document.querySelector('.article');
-  const list = document.querySelector('.article__list');
+  const blogBtn = document.querySelector('.article__btn-add');
+  blogBtn.addEventListener('click', () => {
+    const articleBox = document.querySelector('.article');
+    const list = document.querySelector('.article__list');
 
-  for (const post of posts) {
-    const article = createPost(post);
-    list.appendChild(article);
-  }
+    for (const post of posts) {
+      const article = createPost(post);
+      list.appendChild(article);
+    }
 
-  articleBox.appendChild(list);
+    articleBox.appendChild(list);
+  });
 }
 
 function createPost(post) {
