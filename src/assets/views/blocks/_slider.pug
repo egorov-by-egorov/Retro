@@ -1,13 +1,13 @@
 .slider
-  .slider__window(data-glide-el="track")
-    ul.slider__list
-      li.slider__item
+  .slider__window.glide__track(data-glide-el="track")
+    ul.glide__slides
+      li.glide__slide
         +image('car1.jpg', 'slider pictures', 'slider__img')
-      li.slider__item
+      li.glide__slide
         +image('car2.jpg', 'slider pictures', 'slider__img')
-      li.slider__item
+      li.glide__slide
         +image('car3.jpg', 'slider pictures', 'slider__img')
-      li.slider__item
+      li.glide__slide
         +image('car4.jpg', 'slider pictures', 'slider__img')
   .slider__control(data-glide-el="controls")
     button.slider__btn(type="button",data-glide-dir='<')

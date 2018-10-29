@@ -3,4 +3,4 @@ mixin icon(iconName, iconClass)
     use(xlink:href=`./assets/images/svg/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)
-  img(src=require(`./assets/images/${imagePath}`) alt=`${imageAlt}`, class=`${imageClass}`)
+  img(src=`./assets/images/${imagePath}` alt=`${imageAlt}`, class=`${imageClass}`)
